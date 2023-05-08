@@ -1,0 +1,21 @@
+input:hover{
+transform: scale(1.07);
+border-color: rgb(250, 6, 6);
+
+}
+button{
+    padding: 5px 30px;
+    border-radius: 5px;
+    color: black;
+    border: solid 1px black;
+    background-color:transparent;
+    transition: all 0.5s;
+    margin:4px;
+    border-radius: 5em;
+
+}
+button:hover{
+    background-color: #02F2A2;
+    color:rgb(0, 0, 0);
+    transform: scale(1.03);
+}

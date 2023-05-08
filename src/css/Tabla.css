@@ -1,0 +1,17 @@
+td:hover{
+transform: scale(1.02);
+font-family: 'Arial', Courier, bold;
+color: black;
+
+}
+
+.btn{
+padding: 2px 3px;
+text-align: center;
+}
+.crud{
+    text-align: center;
+}
+.boton{
+padding-left:30px;
+}
