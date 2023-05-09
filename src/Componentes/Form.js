@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Form.css";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 const Form = ({ book, setBook }) => {
   const Cambio = (e) => {
     setBook({
@@ -12,7 +12,6 @@ const Form = ({ book, setBook }) => {
   let { titulo, autor, edicion } = book;
 
   const submit = () => {
-    
     edicion = parseInt(edicion, 10);
     //validacion
     if (titulo === "" || autor === "" || edicion <= 0) {
@@ -20,7 +19,7 @@ const Form = ({ book, setBook }) => {
       return;
     }
     //consulta
-    
+
     const requestInit = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -29,7 +28,7 @@ const Form = ({ book, setBook }) => {
     fetch(" http://localhost:9000/api", requestInit)
       .then((res) => res.json())
       .then((res) => console.log(res));
-     
+
     //reiniciar el state del libro
     setBook({
       titulo: "",
@@ -38,7 +37,6 @@ const Form = ({ book, setBook }) => {
     });
     alert("Guardado correctamete");
   };
-
 
   return (
     <form onSubmit={submit}>
